@@ -9,6 +9,7 @@
 
 .review-item img {
     width: 91px;
+    margin-right:  10px;
 }
 
 .review-item-details p{
@@ -20,4 +21,20 @@
     justify-content: space-between;
     width: 100%;
 }
+.delete-container{
+    display: flex;
+    align-items: center;
+}
 
+.delete-icon{
+    color:rgba(235, 87, 87, 1);
+    font-size: 27px;
+}
+.delete-btn{
+    background-color:rgba(235, 87, 87, 0.3);
+    border:0px;
+    height: 55px;
+    width: 55px;
+    border-radius:50%;
+    cursor: pointer;
+}
