@@ -33,6 +33,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 20px;
+    border: 1px  solid lightgrey;
 }
 
 .form-submit{
@@ -43,6 +44,7 @@
     border-radius:  5px;
     font-size:20px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .form-submit:hover{
