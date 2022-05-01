@@ -13,10 +13,6 @@ const Shipment = () => {
     const handleNameBlur = (event) => {
         setName(event.target.value);
     }
-
-    const handleEmailBlur = (event) => {
-        setEmail(event.target.value);
-      };
     
       const handleAddressBlur = (event) => {
         setAddress(event.target.value);
@@ -28,6 +24,8 @@ const Shipment = () => {
 
       const handleCreateUser = (event) => {
         event.preventDefault();
+        const shipping = {name, email, address, phone};
+        console.log(shipping);
       }
 
     return (
@@ -41,7 +39,6 @@ const Shipment = () => {
               onBlur={handleNameBlur}
               type="text"
               name="name"
-              id=""
               required
             />
           </div>
@@ -51,7 +48,6 @@ const Shipment = () => {
               value={user?.email} readOnly
               type="email"
               name="email"
-              id=""
               required
             />
           </div>
@@ -61,7 +57,6 @@ const Shipment = () => {
               onBlur={handleAddressBlur}
               type="text"
               name="address"
-              id=""
               required
             />
           </div>
@@ -71,7 +66,6 @@ const Shipment = () => {
               onBlur={handlePhoneBlur}
               type="text"
               name="phone"
-              id=""
               required
             />
           </div>
