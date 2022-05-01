@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Login.css";
 
@@ -16,12 +16,18 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
+  const navigate = useNavigate(auth);
+
   const handleEmailBlur = event => {
     setEmail(event.target.value);
   }
 
   const handlePasswordBlur = event => {
     setPassword(event.target.value);
+  }
+
+  if(user){
+    navigate('/shop');
   }
 
   const handleUserSignIn = event => {
@@ -53,6 +59,9 @@ const Login = () => {
             />
           </div>
           <p style={{color:'red'}}>{error?.message}</p>
+          {
+            loading && <p>Loading...</p>
+          }
           <input className="form-submit" type="submit" value="Login" />
         </form>
         <p>
