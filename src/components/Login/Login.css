@@ -24,6 +24,7 @@
 .input-group label{
     display: block;
     margin-left:5px;
+    margin-bottom: 10px;
 }
 
 .input-group input{
