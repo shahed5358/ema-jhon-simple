@@ -58,7 +58,7 @@ const Shop = () => {
                         <button>Review Order</button>
                     </Link>
                     <Link to="/">
-                        <button></button>
+                        <button>Delete Order</button>
                     </Link>
                 </Cart>
             </div>
